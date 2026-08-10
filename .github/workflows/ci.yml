@@ -55,10 +55,9 @@ jobs:
         run: npm install -g @railway/cli
 
       - name: Deploy Service
-        run: railway up --service agent
+        run: railway up --service agent --project a3f24e38-221a-40c6-88ca-41d2ae84693d --environment production -y
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-          RAILWAY_PROJECT_ID: a3f24e38-221a-40c6-88ca-41d2ae84693d
 
       - name: Smoke test
         run: |
